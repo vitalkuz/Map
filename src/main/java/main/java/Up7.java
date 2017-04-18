@@ -37,10 +37,19 @@ class Up7 extends JFrame {
         solders.add(new Solder(field, 300, 100, 0));
         solders.add(new Solder(field, 200, 200, 1));
         int i = 0;
-        while (i < 11) {
-            TimeUnit.SECONDS.sleep(1);
-            solders.get(1).move(200, 100 + i*10);
-            i++;
-        }
+//        while (i < 11) {
+//            TimeUnit.SECONDS.sleep(1);
+//            solders.get(1).move(200, 100 + i*10);
+//            i++;
+//        }
+        solders.get(0).hp = solders.get(0).hp - 70;
+        System.out.println(solders.get(0).getHp());
+        System.out.println(solders.get(0).fullHp);
+        System.out.println(solders.get(0).percentOfHp());
+
+
+        System.out.println(solders.get(1).getHp());
+
+
     }
 }
