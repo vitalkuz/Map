@@ -42,13 +42,6 @@ class Up7 extends JFrame {
 //            solders.get(1).move(200, 100 + i*10);
 //            i++;
 //        }
-        solders.get(0).hp = solders.get(0).hp - 70;
-        System.out.println(solders.get(0).getHp());
-        System.out.println(solders.get(0).fullHp);
-        System.out.println(solders.get(0).percentOfHp());
-
-
-        System.out.println(solders.get(1).getHp());
 
 
     }

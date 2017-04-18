@@ -13,6 +13,8 @@ class DrawingComponent extends JPanel {
         Graphics2D drp = (Graphics2D)gh;
         int i = 0;
 
+        drp.drawOval(360, 360, 40, 40);
+
         while (i < solders.size()) {
             drawSolder(drp, solders.get(i), i);
             i++;
