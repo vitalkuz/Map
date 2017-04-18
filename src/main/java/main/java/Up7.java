@@ -34,9 +34,11 @@ class Up7 extends JFrame {
         boolean flagNotCaptured = true;
         Up7 field = new Up7();
         field.setVisible(true);
-        solders.add(new Solder(field, 300, 100, 0));
-        solders.add(new Solder(field, 200, 200, 1));
+        solders.add(new Solder(field, 400, 400, 0));
+        solders.add(new Solder(field, 381, 400, 1));
         int i = 0;
+        System.out.println(solders.get(0).capturedOfFlag());
+        System.out.println(solders.get(1).capturedOfFlag());
 //        while (i < 11) {
 //            TimeUnit.SECONDS.sleep(1);
 //            solders.get(1).move(200, 100 + i*10);

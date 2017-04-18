@@ -37,6 +37,14 @@ class Solder {
         return (double)this.hp/this.fullHp;
     }
 
+    boolean capturedOfFlag() {
+        if ((Math.pow((this.x - 400), 2) + Math.pow((this.y - 400), 2)) < 400) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     int getX() {
         return x;
     }
