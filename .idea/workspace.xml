@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37730a59-bf64-4b30-9978-b3ce9b31e414" name="Default" comment="FindTarget need fix&#10;Solders can shoot around all map">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/main/java/weapon/AssaultRifle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/main/java/weapon/Pistol.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/main/java/weapon/Shothun.java" />
+    <list default="true" id="37730a59-bf64-4b30-9978-b3ce9b31e414" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/main/java/Solder.java" afterPath="$PROJECT_DIR$/src/main/java/main/java/Solder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/main/java/DrawingComponent.java" afterPath="$PROJECT_DIR$/src/main/java/main/java/DrawingComponent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/main/java/Up7.java" afterPath="$PROJECT_DIR$/src/main/java/main/java/Up7.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/main/java/weapon/Rifle.java" afterPath="$PROJECT_DIR$/src/main/java/main/java/weapon/Rifle.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,11 +26,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DrawingComponent.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DrawingComponent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/java/DrawingComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
+            <state relative-caret-position="221">
+              <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,11 +41,11 @@
       <file leaf-file-name="Up7.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/java/Up7.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+            <state relative-caret-position="441">
+              <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1493144332378" expanded="true" signature="1667:1668" ph="..." />
+                <marker date="1493145502151" expanded="true" signature="1667:1668" ph="..." />
               </folding>
             </state>
           </provider>
@@ -123,12 +119,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/java/Solder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="91" column="29" lean-forward="true" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+            <state relative-caret-position="1802">
+              <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
+                <element signature="e#2024#2025#0" expanded="true" />
                 <element signature="e#2069#2070#0" expanded="true" />
               </folding>
             </state>
@@ -287,16 +284,16 @@
         <option value="$PROJECT_DIR$/src/main/java/MainFrame.form" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/java/DrawingComponent.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/Rifle.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/Weapon.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/weapon/Weapon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/java/Up7.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/weapon/Shothun.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/weapon/Rifle.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/weapon/AssaultRifle.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/weapon/Pistol.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/java/Solder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/java/Up7.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/java/DrawingComponent.java" />
       </list>
     </option>
   </component>
@@ -789,12 +786,19 @@
       <option name="project" value="LOCAL" />
       <updated>1493143999460</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Add weapon">
+      <created>1493144887860</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1493144887860</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1084" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -812,7 +816,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26350605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26350605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -835,7 +839,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project" />
     <MESSAGE value="FindTarget need fix&#10;Solders can shoot around all map" />
-    <option name="LAST_COMMIT_MESSAGE" value="FindTarget need fix&#10;Solders can shoot around all map" />
+    <MESSAGE value="Add weapon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add weapon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -872,7 +877,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1493144332378" expanded="true" signature="1667:1668" ph="..." />
+            <marker date="1493145502151" expanded="true" signature="1667:1668" ph="..." />
           </folding>
         </state>
       </provider>
@@ -890,6 +895,7 @@
         <state relative-caret-position="1428">
           <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
+            <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2069#2070#0" expanded="true" />
           </folding>
         </state>
@@ -1041,7 +1047,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1493144332378" expanded="true" signature="1667:1668" ph="..." />
+            <marker date="1493145502151" expanded="true" signature="1667:1668" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1051,6 +1057,7 @@
         <state relative-caret-position="408">
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
+            <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2069#2070#0" expanded="true" />
           </folding>
         </state>
@@ -1202,7 +1209,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1493144332378" expanded="true" signature="1667:1668" ph="..." />
+            <marker date="1493145502151" expanded="true" signature="1667:1668" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1212,6 +1219,7 @@
         <state relative-caret-position="408">
           <caret line="24" column="24" lean-forward="true" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
+            <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2069#2070#0" expanded="true" />
           </folding>
         </state>
@@ -1540,27 +1548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/java/DrawingComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="46" column="16" lean-forward="false" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/java/Up7.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1493144332378" expanded="true" signature="1667:1668" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/java/weapon/Weapon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1621,10 +1608,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/java/Solder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="91" column="29" lean-forward="true" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
+        <state relative-caret-position="1802">
+          <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding>
+            <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2069#2070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/java/Up7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="53" column="37" lean-forward="false" selection-start-line="53" selection-start-column="37" selection-end-line="53" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1493145502151" expanded="true" signature="1667:1668" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/java/DrawingComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="40" column="41" lean-forward="true" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
