@@ -1,9 +1,11 @@
 package main.java.weapon;
 
-public class Rifle implements Weapon {
-    private int damage = 100;
-    private int distance = 300;
-
+/**
+ * Created by Seva_ on 25.04.2017.
+ */
+public class Shothun implements Weapon {
+    private int damage = 70;
+    private int distance = 100;
 
     @Override
     public int getDamage() {

@@ -1,7 +1,6 @@
 package main.java;
 
-import main.java.weapon.Rifle;
-import main.java.weapon.Weapon;
+import main.java.weapon.*;
 
 class Solder {
     private Integer x;
@@ -25,9 +24,19 @@ class Solder {
         this.fullHp = this.hp;
         this.dead = false;
         this.skill = 1.0;
-        int i = 1; //(int)(Math.random());
-        if (i == 1) {
-            this.gun = new Rifle();
+        int i = (int)(Math.random()*4);
+        switch (i) {
+            case 0:
+                this.gun = new Pistol();
+                break;
+            case 1:
+                this.gun = new Shothun();
+                break;
+            case 2:
+                this.gun = new AssaultRifle();
+                break;
+            case 3:
+                this.gun = new Rifle();
         }
         this.running = false;
         field.repaint();
@@ -84,7 +93,7 @@ class Solder {
         this.skill = this.skill + 1.0;
     }
 
-    public Solder findtarget(){ //ищет цель
+    public Solder findTarget(){ //ищет цель
         int i;
         double k; //k - расстояние от выбранного солдата до солдатов в массиве
         for (i = 0; i < Up7.solders.size(); i++) {

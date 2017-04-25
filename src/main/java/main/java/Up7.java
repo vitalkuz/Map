@@ -46,8 +46,8 @@ class Up7 extends JFrame {
 //        }
         for(i = 0; i < 40; i++) {
 
-            Solder target = solders.get(0).findtarget();
-            if (solders.get(0).findtarget() != null) {
+            Solder target = solders.get(0).findTarget();
+            if (solders.get(0).findTarget() != null) {
                 solders.get(0).shoot(target);
                 i = i - 1;
             } else {
