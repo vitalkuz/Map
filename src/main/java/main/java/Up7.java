@@ -34,17 +34,45 @@ class Up7 extends JFrame {
         boolean flagNotCaptured = true;
         Up7 field = new Up7();
         field.setVisible(true);
-        solders.add(new Solder(field, 400, 400, 0));
-        solders.add(new Solder(field, 381, 400, 1));
+
+        solders.add(new Solder(field, 700, 200, 0));
+        solders.add(new Solder(field, 200, 200, 1));
         int i = 0;
-        System.out.println(solders.get(0).capturedOfFlag());
-        System.out.println(solders.get(1).capturedOfFlag());
+        int a;
 //        while (i < 11) {
 //            TimeUnit.SECONDS.sleep(1);
 //            solders.get(1).move(200, 100 + i*10);
 //            i++;
 //        }
+        for(i = 0; i < 20; i++) {
+
+            a = solders.get(1).findtarget(1);
+            if (a > -1) {
+                solders.get(1).shoot(1, 0);
+            } else {
+                solders.get(1).move(200+10*i, 200);
+            }
+            TimeUnit.SECONDS.sleep(1);
+        }
+
+//        solders.add(new Solder(field, 400, 400, 0));
+//        solders.add(new Solder(field, 200, 100, 1));
+//        solders.add(new Solder(field, 100, 100, 2));
+//        solders.add(new Solder(field, 400, 500, 3));
+//        int i = 0;
+//        System.out.println(solders.get(0).capturedOfFlag());
+//        System.out.println(solders.get(1).capturedOfFlag());
+//
+//
+//        while (!solders.get(1).capturedOfFlag()) {
+//            TimeUnit.MILLISECONDS.sleep(200);
+//            while (i < 11) {
+//                solders.get(1).move(200 + (i * 10), 200 + (i * 10));
+//                i++;
+//            }
+//        }
 
 
     }
 }
+
