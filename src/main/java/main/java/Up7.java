@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 class Up7 extends JFrame {
     static ArrayList<Solder> solders = new ArrayList<>();
+    static ArrayList<Solder> deadSolders = new ArrayList<>();
     private Integer width = 800;
     private Integer height = 800;
 
@@ -34,9 +35,8 @@ class Up7 extends JFrame {
         boolean flagNotCaptured = true;
         Up7 field = new Up7();
         field.setVisible(true);
-
-        solders.add(new Solder(field, 700, 200, 0));
         solders.add(new Solder(field, 200, 200, 1));
+        solders.add(new Solder(field, 700, 200, 0));
         int i = 0;
         int a;
 //        while (i < 11) {
@@ -44,15 +44,16 @@ class Up7 extends JFrame {
 //            solders.get(1).move(200, 100 + i*10);
 //            i++;
 //        }
-        for(i = 0; i < 20; i++) {
+        for(i = 0; i < 40; i++) {
 
-            a = solders.get(1).findtarget(1);
-            if (a > -1) {
-                solders.get(1).shoot(1, 0);
+            Solder target = solders.get(0).findtarget();
+            if (solders.get(0).findtarget() != null) {
+                solders.get(0).shoot(target);
+                i = i - 1;
             } else {
-                solders.get(1).move(200+10*i, 200);
+                solders.get(0).move(200+10*i, 200);
             }
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.MILLISECONDS.sleep(300);
         }
 
 //        solders.add(new Solder(field, 400, 400, 0));
