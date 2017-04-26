@@ -12,9 +12,11 @@ class Solder {
     private Up7 field;
     private Integer team;
     private Weapon gun;
+    private int WhatGun;
     private double skill;
     private boolean dead;
     public boolean running;
+    private int turn; // {RIGHT = 1, LEFT = 2, TOP = 3, DOWN = 4, RIGHT_TOP = 13, LEFT_TOP = 23, RIGHT_DOWN = 14, LEFT_DOWN = 24};
 
     Solder(Up7 field, int x, int y, int team) {
         super();
@@ -26,8 +28,8 @@ class Solder {
         this.fullHp = this.hp;
         this.dead = false;
         this.skill = 1.0;
-        int i = (int)(Math.random()*4);
-        switch (i) {
+        this.WhatGun = (int)(Math.random()*4);
+        switch (WhatGun) {
             case 0:
                 this.gun = new Pistol();
                 break;
@@ -41,18 +43,85 @@ class Solder {
                 this.gun = new Rifle();
         }
         this.running = false;
+
+        setTurn();
+
         field.repaint();
     }
-
 
 
     void move(int x, int y) throws InterruptedException {
         this.running = true;
         this.x = x;
         this.y = y;
+
+        setTurn();
+
         field.repaint();
         TimeUnit.MILLISECONDS.sleep(300);
         this.running = false;
+    }
+
+    private void setTurn(){
+        if (this.x - 400 > 0) {
+            double yx = (double)(this.y-400) / (double)(this.x-400);
+            if (yx > 1.5) {
+                this.turn = 4; // DOWN
+            } else if (yx > 0.5) {
+                this.turn = 23; // LEFT_DOWN
+            } else if (yx > -0.5) {
+                this.turn = 2;  //LEFT
+            } else if (yx > -1.5) {
+                this.turn = 24; //LEFT_TOP
+            } else {
+                this.turn = 3; //TOP
+            }
+        } else {
+            double yx = (double)(this.y-400) / (double)(this.x-400);
+            yx = -yx;
+            if (yx > 1.5) {
+                this.turn = 4; // DOWN
+            } else if (yx > 0.5) {
+                this.turn = 13; // RIGHT_DOWN
+            } else if (yx > -0.5) {
+                this.turn = 1;  //RIGHT
+            } else if (yx > -1.5) {
+                this.turn = 14; //RIGHT_TOP
+            } else {
+                this.turn = 3; //TOP
+            }
+        }
+    }
+
+    private void setTurn(Solder enemySolder){
+        if (this.x - enemySolder.getX() > 0) {
+            double yx = (double)(this.y - enemySolder.getY()) / (double)(this.x - enemySolder.getY());
+            if (yx > 1.5) {
+                this.turn = 4; // DOWN
+            } else if (yx > 0.5) {
+                this.turn = 23; // LEFT_DOWN
+            } else if (yx > -0.5) {
+                this.turn = 2;  //LEFT
+            } else if (yx > -1.5) {
+                this.turn = 24; //LEFT_TOP
+            } else {
+                this.turn = 3; //TOP
+            }
+        } else {
+            double yx = (double)(this.y - enemySolder.getY()) / (double)(this.x - enemySolder.getY());
+            yx = -yx;
+            if (yx > 1.5) {
+                this.turn = 4; // DOWN
+            } else if (yx > 0.5) {
+                this.turn = 13; // RIGHT_DOWN
+            } else if (yx > -0.5) {
+                this.turn = 1;  //RIGHT
+            } else if (yx > -1.5) {
+                this.turn = 14; //RIGHT_TOP
+            } else {
+                this.turn = 3; //TOP
+            }
+        }
     }
 
     int getTeam() {
@@ -61,6 +130,10 @@ class Solder {
 
     int getHp() {
         return hp;
+    }
+
+    int getTurn() {
+        return this.turn;
     }
 
     double percentOfHp() {
@@ -114,6 +187,7 @@ class Solder {
 
     public void shoot(Solder enemySolder) throws InterruptedException {//стреляет из а в b
         this.running = true;
+        setTurn(enemySolder);
         double v;
         v = Math.atan(skill/4) * 2 / 3.141592654;
         if (Math.random() < v) {
@@ -122,8 +196,14 @@ class Solder {
         this.raiseSkill(); //после выстрела у стрелка поднялся скил.
 
         field.repaint();
-        TimeUnit.MILLISECONDS.sleep(300);
+        TimeUnit.MILLISECONDS.sleep(1000);
+        setTurn();
         this.running = false;
+        field.repaint();
+    }
+
+    public int whatGun() { //return 0 - pistol, 1 - shotgun; 2 - assault rifle; 3 - rifle;
+        return WhatGun;
     }
 
 }

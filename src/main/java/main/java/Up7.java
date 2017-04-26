@@ -35,17 +35,16 @@ class Up7 extends JFrame {
         boolean flagNotCaptured = true;
         Up7 field = new Up7();
         field.setVisible(true);
-        solders.add(new Solder(field, 200, 100, 1));
-        solders.add(new Solder(field, 200, 140, 0));
+        solders.add(new Solder(field, 400, 200, 1));
+        solders.add(new Solder(field, 200, 400, 0));
+        System.out.println(solders.get(1).getTurn());
+        TimeUnit.MILLISECONDS.sleep(500);
+        Solder target = solders.get(0).findTarget();
+            if (target != null) {
+                solders.get(0).shoot(solders.get(0).findTarget());
+            }
         int i = 0;
         int a;
-
-        Solder target = solders.get(1).findTarget();
-        if (target != null) {
-            solders.get(1).shoot(target);
-        }
-        solders.get(0).move(210, 100);
-
 
     }
 }
