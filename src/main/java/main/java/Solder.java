@@ -2,6 +2,8 @@ package main.java;
 
 import main.java.weapon.*;
 
+import java.util.concurrent.TimeUnit;
+
 class Solder {
     private Integer x;
     private Integer y;
@@ -12,7 +14,7 @@ class Solder {
     private Weapon gun;
     private double skill;
     private boolean dead;
-    private boolean running;
+    public boolean running;
 
     Solder(Up7 field, int x, int y, int team) {
         super();
@@ -42,10 +44,15 @@ class Solder {
         field.repaint();
     }
 
-    void move(int x, int y) {
+
+
+    void move(int x, int y) throws InterruptedException {
+        this.running = true;
         this.x = x;
         this.y = y;
         field.repaint();
+        TimeUnit.MILLISECONDS.sleep(300);
+        this.running = false;
     }
 
     int getTeam() {
@@ -105,14 +112,18 @@ class Solder {
         return null; //ошибка если не нашлось цели
     }
 
-    public void shoot(Solder enemySolder){//стреляет из а в b
+    public void shoot(Solder enemySolder) throws InterruptedException {//стреляет из а в b
+        this.running = true;
         double v;
-        v = Math.atan(skill/2) * 2 / 3.141592654;
+        v = Math.atan(skill/4) * 2 / 3.141592654;
         if (Math.random() < v) {
             this.hitting(enemySolder);
         }
         this.raiseSkill(); //после выстрела у стрелка поднялся скил.
+
         field.repaint();
+        TimeUnit.MILLISECONDS.sleep(300);
+        this.running = false;
     }
 
 }

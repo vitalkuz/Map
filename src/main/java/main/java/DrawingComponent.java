@@ -81,6 +81,11 @@ class DrawingComponent extends JPanel {
         drp.fillRect(Up7.solders.get(i).getX()-15, Up7.solders.get(i).getY()-20, (int)(30 * Up7.solders.get(i).percentOfHp()),5);
         drp.drawRect(Up7.solders.get(i).getX()-15, Up7.solders.get(i).getY()-20, 30,5);
 
+        drp.setColor(Color.orange);
+        if (Up7.solders.get(i).running == true) {
+            drp.drawOval(Up7.solders.get(i).getX()-13, Up7.solders.get(i).getY()-13, 26, 26);
+        }
+
     }
 
 }
