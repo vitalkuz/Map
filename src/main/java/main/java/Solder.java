@@ -2,7 +2,7 @@ package main.java;
 
 import main.java.weapon.*;
 
-import java.util.concurrent.TimeUnit;
+//import java.util.concurrent.TimeUnit;
 
 class Solder {
     private Integer x;
@@ -50,7 +50,8 @@ class Solder {
     }
 
 
-    void move(int x, int y) throws InterruptedException {
+//    void move(int x, int y) throws InterruptedException {
+    void move(int x, int y) {
         this.running = true;
         this.x = x;
         this.y = y;
@@ -58,7 +59,7 @@ class Solder {
         setTurn();
 
         field.repaint();
-        TimeUnit.MILLISECONDS.sleep(300);
+//        TimeUnit.MILLISECONDS.sleep(300);
         this.running = false;
     }
 
@@ -185,7 +186,8 @@ class Solder {
         return null; //ошибка если не нашлось цели
     }
 
-    public void shoot(Solder enemySolder) throws InterruptedException {//стреляет из а в b
+//    public void shoot(Solder enemySolder) throws InterruptedException {//стреляет из а в b
+    public void shoot(Solder enemySolder){
         this.running = true;
         setTurn(enemySolder);
         double v;
@@ -196,7 +198,7 @@ class Solder {
         this.raiseSkill(); //после выстрела у стрелка поднялся скил.
 
         field.repaint();
-        TimeUnit.MILLISECONDS.sleep(1000);
+//        TimeUnit.MILLISECONDS.sleep(1000);
         setTurn();
         this.running = false;
         field.repaint();
